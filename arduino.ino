@@ -113,7 +113,7 @@ void loop() {
     if (Firebase.ready() && (millis() - sendDataPrevMillis > uploadInterval)) {
         sendDataPrevMillis = millis();
 
-        if (Firebase.RTDB.setFloat(&fbdo, "/sensor/calcVoltage", calcVoltage)) {
+        if (Firebase.RTDB.setFloat(&fbdo, "/sensor/dustDensityug", dustDensityug)) {
             Serial.println("Firebase upload succeeded");
         } else {
             Serial.println("Firebase upload failed");
