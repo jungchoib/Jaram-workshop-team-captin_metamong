@@ -72,7 +72,10 @@ def get_air_quality(latitude, longitude, api_key):
 # 파이어베이스에 데이터 저장 함수
 def save_to_firebase(data):
     ref = db.reference('air_quality')
-    ref.push(data)
+    # ref.push(data)
+    ref.update(data)
+    print("데이터 저장해줘")
+
 
 # 메인 함수
 if __name__ == "__main__":
