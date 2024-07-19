@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+  height: 100%;
+  min-width: 350px;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Container Class */
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Responsive Layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.col {
+  flex: 1;
+  padding: 10px;
+}
+
+/* Mobile First */
+header,
+.content,
+footer {
+  text-align: center;
+}
+
+/* Media Queries */
+
+/* For tablets and larger screens */
+@media (min-width: 600px) {
+  .row {
+    flex-wrap: nowrap;
+  }
+
+  .col {
+    flex: 1 1 50%;
+  }
+}
+
+/* For desktops and larger screens */
+@media (min-width: 992px) {
+  .col {
+    flex: 1 1 33.33%;
+  }
+}
